@@ -342,13 +342,13 @@ extern "C" void* ThreadStats(void*) {
   } while(1);
 }
 
-static const string mainnet_seeds[] = {"dnsseed.bit-note.org", ""};
+static const string mainnet_seeds[] = {"dnsseeder.bit-note.org", ""};
 static const string testnet_seeds[] = {"", ""};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
   if (!fTestNet){
-    db.Add(CService("kjy2eqzk4zwi5zd3.onion", 43662), true);
+    db.Add(CService("95.85.37.201", 43662), true);
   }
   do {
     for (int i=0; seeds[i] != ""; i++) {
